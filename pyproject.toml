@@ -1,0 +1,44 @@
+[project]
+name = "tspy"
+version = "0.1.0"
+description = "A Python client for the Tailscale API v2"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Maisem Ali"},
+]
+keywords = ["tailscale", "api", "client", "python", "vpn"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Networking",
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.11.7",
+    "requests>=2.32.4",
+    "typing-extensions>=4.14.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/maisem/tspy"
+Repository = "https://github.com/maisem/tspy"
+"Bug Tracker" = "https://github.com/maisem/tspy/issues"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.16.1",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.12.3",
+    "types-requests>=2.32.4.20250611",
+]
