@@ -81,8 +81,8 @@ See the [example.py](example.py) file for a comprehensive example that demonstra
 ### Managing Devices
 
 ```python
-# List all devices with details
-devices = client.list_devices(fields="all")
+# List all devices with details (fields="all" is now the default)
+devices = client.list_devices()
 
 # Authorize a device
 client.authorize_device("device-id", authorized=True)

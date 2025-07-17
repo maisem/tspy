@@ -60,7 +60,7 @@ class TailscaleClient:
             raise TspyAPIError(f"Request failed: {e}")
     
     # Device endpoints
-    def list_devices(self, fields: Optional[Literal["all", "default"]] = None) -> List[Device]:
+    def list_devices(self, fields: Optional[Literal["all", "default"]] = "all") -> List[Device]:
         """List all devices in the tailnet.
         
         Args:
@@ -71,7 +71,7 @@ class TailscaleClient:
         data = self._request("GET", f"/tailnet/{self.tailnet}/devices", params=params)
         return [Device(**device) for device in data.get("devices", [])]
     
-    def get_device(self, device_id: str, fields: Optional[Literal["all", "default"]] = None) -> Device:
+    def get_device(self, device_id: str, fields: Optional[Literal["all", "default"]] = "all") -> Device:
         """Get details of a specific device.
         
         Args:
